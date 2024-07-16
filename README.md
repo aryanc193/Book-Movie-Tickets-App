@@ -13,8 +13,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/6DaddyCoders9/Sport-Learning-App.git
-cd Sport-Learning-App
+git clone https://github.com/6DaddyCoders9/Book-Movie-Tickets-App.git
+cd Book-Movie-Tickets-App
 ```
 
 **Installation**
