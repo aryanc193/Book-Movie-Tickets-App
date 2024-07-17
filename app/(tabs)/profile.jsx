@@ -26,12 +26,7 @@ const Profile = () => {
       <FlatList
         data={posts}
         keyExtractor={(item) => item.$id}
-        ListEmptyComponent={() => (
-          <EmptyState
-            title="No Centers Found"
-            subtitle="Don't worry, We are finding you the best deals!"
-          />
-        )}
+        ListEmptyComponent={() => <EmptyState title="No Movies Found" />}
         ListHeaderComponent={() => (
           <View className="w-full flex justify-center items-center mt-6 mb-12 px-4">
             <TouchableOpacity

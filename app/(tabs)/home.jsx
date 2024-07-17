@@ -51,12 +51,7 @@ const Home = () => {
             </View>
           </View>
         )}
-        ListEmptyComponent={() => (
-          <EmptyState
-            title="No Centers Found"
-            subtitle="Don't worry, We are finding you the best deals!"
-          />
-        )}
+        ListEmptyComponent={() => <EmptyState title="No Movies Found" />}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
