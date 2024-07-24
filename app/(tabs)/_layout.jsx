@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import { Tabs, Redirect } from "expo-router";
 
-import { icons } from "../../constants";
+import { icons, images } from "../../constants";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
@@ -28,13 +28,13 @@ const TabsLayout = () => {
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: "#FFA001",
-          tabBarInactiveTintColor: "#CDCDE0",
+          tabBarActiveTintColor: "red",
+          tabBarInactiveTintColor: "#000",
           tabBarStyle: {
-            backgroundColor: "#161622",
-            borderTopWidth: 1,
-            borderTopColor: "#232533",
-            height: 84,
+            backgroundColor: "#f0f0f0",
+            borderTopWidth: 15,
+            borderTopColor: "#f0f0f0",
+            height: 64,
           },
         }}
       >
@@ -44,12 +44,7 @@ const TabsLayout = () => {
             title: "Home",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                icon={icons.home}
-                color={color}
-                name="Home"
-                focused={focused}
-              />
+              <TabIcon icon={icons.home} color={color} focused={focused} />
             ),
           }}
         />
@@ -60,9 +55,8 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={icons.profile}
+                icon={images.logoSmall}
                 color={color}
-                name="Profile"
                 focused={focused}
               />
             ),

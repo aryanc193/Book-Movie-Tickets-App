@@ -29,9 +29,7 @@ const SignIn = () => {
       const result = await getCurrentUser();
       setUser(result);
       setIsLogged(true);
-
-      // Alert.alert("Success", "User signed in successfully");
-      router.replace("/home");
+      router.replace("../SelectCity");
     } catch (error) {
       Alert.alert("Error", error.message);
     } finally {
@@ -39,7 +37,7 @@ const SignIn = () => {
     }
   };
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-black h-full">
       <ScrollView>
         <View className="w-full flex justify-center min-h-[83vh] px-4 my-6">
           <Image

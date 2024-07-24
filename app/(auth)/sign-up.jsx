@@ -30,7 +30,7 @@ const SignUp = () => {
       setUser(result);
       setIsLogged(true);
 
-      router.replace("/home");
+      router.replace("../SelectCity");
     } catch (error) {
       Alert.alert("Error", error.message);
     } finally {
@@ -38,7 +38,7 @@ const SignUp = () => {
     }
   };
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-black h-full">
       <ScrollView>
         <View className="w-full flex justify-center min-h-[83vh] px-4 my-6">
           <Image
