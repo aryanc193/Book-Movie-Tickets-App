@@ -1,7 +1,8 @@
 import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
-import GlobalProvider from "../context/GlobalProvider";
+import { StoreProvider } from "../context/Wrapper"; // Import StoreProvider
+import GlobalProvider from "../context/GlobalProvider"; // Import GlobalProvider
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,11 +28,20 @@ const RootLayout = () => {
 
   return (
     <GlobalProvider>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
+      <StoreProvider>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="movies/[id]" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="movies/Booking"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen name="SelectCity" options={{ headerShown: false }} />
+          <Stack.Screen name="movies/Ticket" options={{ headerShown: false }} />
+        </Stack>
+      </StoreProvider>
     </GlobalProvider>
   );
 };

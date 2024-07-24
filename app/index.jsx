@@ -13,7 +13,7 @@ export default function App() {
   if (!isLoading && isLogged) return <Redirect href="/home" />;
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-black h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="w-full flex justify-center items-center h-full px-4">
           <Image
@@ -25,7 +25,7 @@ export default function App() {
           <View className="relative mt-5">
             <Text className="text-3xl text-white font-bold text-center">
               Book tickets to your favourite movie with{" "}
-              <Text className="text-secondary-200">Book Movie Tickets App</Text>
+              <Text className="text-red-600">Book Movie Tickets App</Text>
             </Text>
           </View>
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
